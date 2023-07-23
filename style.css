@@ -1,0 +1,120 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Silkscreen', cursive;
+}
+
+:root{
+    --bg-primary: rgb(120, 127, 233);
+    --bg-secondary: rgb(91, 245, 219);
+    --txt-primary: rgb(61, 58, 58);
+    --txt-secondary: rgb(243, 234, 234);
+    --icons-bg-primary: rgb(201, 80, 58);
+    --icons-bg-secondary: #7777;
+
+}
+
+.container{
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card{
+    width: 40%;
+    background-color: var(--bg-secondary);
+    color: var(--txt-color);
+    width: 200px;
+    padding: 32px;
+    margin: 8px;
+    text-align: center;
+    border: 2px solid black;
+    height: auto;
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, .5);
+}
+
+.icons{
+    font-size: 36px;
+    color: var(--icons-bg-primary);
+    margin-top: 8px;
+}
+
+.title{
+    font-size: 2em;
+}
+
+.description{
+    margin-top: 8px;
+    font-size: .8em;
+}
+
+.btn{
+    margin-top: 16px;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+}
+
+.btn:hover{
+    background-color: var(--bg-primary);
+    color: var(--txt-secondary);
+    transform: rotateY(30deg);
+    -webkit-transform: rotateY(30deg);
+    -moz-transform: rotateY(30deg);
+    -ms-transform: rotateY(30deg);
+    -o-transform: rotateY(30deg);
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+
+.container2{
+    display: none;
+}
+
+@media screen and (max-width: 476px) {
+    .container2{
+        display: none;
+    }
+    .container{
+        background-color: white;
+    }
+    .card{
+        width: 95%;
+    }
+    .title{
+        font-size: 3em;
+    }
+    .description{
+        font-size: 2em;
+    }
+    .btn{
+        padding: 16px;
+        font-size: 2em;
+    }
+    .icons{
+        font-size: 3.5em;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .container{
+        display: none;
+    }
+    .container2{
+        display: block;
+    }
+}
